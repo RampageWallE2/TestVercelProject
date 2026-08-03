@@ -42,12 +42,12 @@ export const PORTFOLIO = {
     'Software útil y escalable',
   ],
   contact: {
-    email: 'tu-correo@ejemplo.com',
-    phone: '+51 000 000 000',
-    githubLabel: 'github.com/tuusuario',
-    githubUrl: 'https://github.com/tuusuario',
-    linkedinLabel: 'linkedin.com/in/tuusuario',
-    linkedinUrl: 'https://www.linkedin.com/in/tuusuario/',
+    email: 'piero201612@gmail.com',
+    phone: '+51 962 483 840',
+    githubLabel: 'github.com/RampageWallE2',
+    githubUrl: 'https://github.com/RampageWallE2',
+    linkedinLabel: 'linkedin.com/in/piero-noa-chahuayo-aab5a0366',
+    linkedinUrl: 'https://www.linkedin.com/in/piero-noa-chahuayo-aab5a0366/',
   },
   education: [
     {
