@@ -59,6 +59,30 @@ export const PORTFOLIO = {
       status: 'Titulación en proceso',
     },
     {
+      period: '2026',
+      title: 'Análisis y Visualización de Datos con Power BI',
+      institution: 'Santander | Open Academy',
+      description:
+      'Capacitación en transformación de datos con Power Query, modelado de información, creación de medidas con DAX y desarrollo de reportes y dashboards interactivos.',
+      status: 'En progreso',
+    },
+    {
+      period: '2023',
+      title: 'Scrum Fundamentals Certified — SFC',
+      institution: 'SCRUMstudy — VMEdu, Inc.',
+      description:
+        'Certificación obtenida tras aprobar el examen de fundamentos de Scrum. Formación en principios ágiles, roles, eventos, artefactos y procesos utilizados para organizar y desarrollar proyectos de manera iterativa.',
+      status: 'Certificado',
+    },
+    {
+      period: '2022 - 2026',
+      title: 'Ingles Intermedio',
+      institution: 'CULTURAL',
+      description:
+        'I have an intermediate level of English and I am currently improving my speaking, listening, and professional communication skills. I can understand technical documentation, follow conversations, and communicate ideas related to software development. I continue studying English to become more confident and fluent in professional environments.',
+      status: 'Titulación en proceso',
+    },    
+    {
       period: 'Actualidad',
       title: 'Formación continua',
       institution: 'Aprendizaje independiente',

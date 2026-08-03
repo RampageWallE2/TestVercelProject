@@ -1371,3 +1371,344 @@ main {
     animation-iteration-count: 1 !important;
   }
 }
+
+.developer-panel {
+  position: relative;
+  width: min(100%, 470px);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(103, 61, 42, 0.58),
+      rgba(24, 15, 12, 0.96)
+    );
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(18px);
+  isolation: isolate;
+}
+
+.developer-panel::before {
+  position: absolute;
+  inset: -1rem 1rem 1rem -1rem;
+  z-index: -2;
+  border: 1px solid rgba(239, 127, 26, 0.25);
+  content: "";
+}
+
+.developer-panel__shape {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.developer-panel__shape--one {
+  top: -9rem;
+  right: -7rem;
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid rgba(239, 127, 26, 0.18);
+}
+
+.developer-panel__shape--two {
+  right: 2rem;
+  bottom: -5rem;
+  width: 10rem;
+  height: 10rem;
+  background: rgba(239, 127, 26, 0.06);
+  filter: blur(6px);
+}
+
+.developer-panel__header {
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.2rem 1.35rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.developer-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.developer-profile__initials {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(239, 127, 26, 0.45);
+  color: var(--orange);
+  background: rgba(239, 127, 26, 0.06);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.developer-profile > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.developer-profile small {
+  color: var(--muted-dark);
+  font-size: 0.58rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.developer-profile strong {
+  font-size: 0.9rem;
+}
+
+.developer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--orange-light);
+  font-size: 0.59rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.developer-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 0 rgba(239, 127, 26, 0.55);
+  animation: pulse 1.8s infinite;
+}
+
+.developer-panel__body {
+  padding: 1.35rem;
+}
+
+.developer-panel__metadata {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.developer-panel__metadata div {
+  display: flex;
+  min-height: 78px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.75rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.developer-panel__metadata span {
+  color: var(--muted-dark);
+  font-size: 0.52rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.developer-panel__metadata strong {
+  color: #e2d4ca;
+  font-size: 0.67rem;
+  line-height: 1.4;
+}
+
+.developer-console {
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(12, 7, 6, 0.78);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+}
+
+.developer-console__top {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.9rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.developer-console__top > span {
+  color: var(--muted-dark);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 0.58rem;
+}
+
+.developer-console__actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.developer-console__actions i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brown-light);
+}
+
+.developer-console__actions i:first-child {
+  background: var(--orange);
+}
+
+.developer-console .code-window {
+  position: relative;
+  inset: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  padding: 1.3rem;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.developer-console .code-window code {
+  display: block;
+  color: #c8b9af;
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+  line-height: 1.85;
+}
+
+.developer-console .code-window code span {
+  color: #e08e55;
+}
+
+.developer-console .code-window code em {
+  color: #e9b58d;
+  font-style: normal;
+}
+
+.developer-console__cursor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-dark);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 0.62rem;
+}
+
+.developer-console__cursor::before {
+  color: var(--orange);
+  content: ">";
+}
+
+.developer-console__cursor i {
+  width: 7px;
+  height: 13px;
+  background: var(--orange);
+  animation: developer-cursor 0.85s infinite;
+}
+
+.developer-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.developer-stack > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.developer-stack > div:last-child {
+  justify-content: flex-end;
+}
+
+.developer-stack span {
+  padding: 0.38rem 0.5rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.018);
+  font-size: 0.57rem;
+}
+
+.developer-panel__footer {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.35rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted-dark);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.developer-panel__footer > div {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.developer-panel__footer-line {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--orange);
+}
+
+.developer-panel__footer strong {
+  color: #cbbcb2;
+  font-size: 0.56rem;
+}
+
+@keyframes developer-cursor {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .developer-panel__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .developer-panel__metadata {
+    grid-template-columns: 1fr;
+  }
+
+  .developer-panel__metadata div {
+    min-height: 66px;
+  }
+
+  .developer-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .developer-stack > div:last-child {
+    justify-content: flex-start;
+  }
+
+  .developer-panel__footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+}
