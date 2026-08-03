@@ -1,0 +1,83 @@
+<section class="page contact-page">
+  <div class="container contact-layout">
+    <div class="contact-intro">
+      <p class="eyebrow">Contacto</p>
+      <h1>Hablemos de software, oportunidades y proyectos.</h1>
+      <p>
+        Puedes contactarme mediante correo, teléfono o mis perfiles
+        profesionales. Reemplaza los datos de ejemplo antes de publicar.
+      </p>
+
+      <a
+        class="contact-email"
+        [href]="'mailto:' + portfolio.contact.email"
+      >
+        {{ portfolio.contact.email }}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="contact-list">
+      <a
+        class="contact-item"
+        [href]="'mailto:' + portfolio.contact.email"
+      >
+        <span>01</span>
+        <div>
+          <small>Correo electrónico</small>
+          <strong>{{ portfolio.contact.email }}</strong>
+        </div>
+        <i aria-hidden="true">↗</i>
+      </a>
+
+      <a
+        class="contact-item"
+        [href]="'tel:' + portfolio.contact.phone.replaceAll(' ', '')"
+      >
+        <span>02</span>
+        <div>
+          <small>Teléfono</small>
+          <strong>{{ portfolio.contact.phone }}</strong>
+        </div>
+        <i aria-hidden="true">↗</i>
+      </a>
+
+      <a
+        class="contact-item"
+        [href]="portfolio.contact.githubUrl"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>03</span>
+        <div>
+          <small>GitHub</small>
+          <strong>{{ portfolio.contact.githubLabel }}</strong>
+        </div>
+        <i aria-hidden="true">↗</i>
+      </a>
+
+      <a
+        class="contact-item"
+        [href]="portfolio.contact.linkedinUrl"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>04</span>
+        <div>
+          <small>LinkedIn</small>
+          <strong>{{ portfolio.contact.linkedinLabel }}</strong>
+        </div>
+        <i aria-hidden="true">↗</i>
+      </a>
+
+      <div class="contact-item contact-item--static">
+        <span>05</span>
+        <div>
+          <small>Ubicación</small>
+          <strong>{{ portfolio.location }}</strong>
+        </div>
+        <i aria-hidden="true">•</i>
+      </div>
+    </div>
+  </div>
+</section>

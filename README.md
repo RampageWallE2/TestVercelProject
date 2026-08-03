@@ -1,40 +1,66 @@
-# Landing Angular — En construcción
+# Portafolio Angular multipágina
 
-## 1. Crear el proyecto base
+Portafolio profesional con las rutas:
 
-```bash
-ng new landing-en-construccion --style=scss --routing=false --skip-tests
-```
+- `/` — Inicio
+- `/perfil` — Carrera y estudios
+- `/tecnologias` — Tecnologías con iconos
+- `/proyectos` — Proyectos actuales y futuros
+- `/contacto` — Datos de contacto
 
-Entra en el proyecto:
-
-```bash
-cd landing-en-construccion
-```
-
-## 2. Reemplazar los archivos
-
-Copia la carpeta `src` de este paquete dentro del proyecto recién creado y acepta reemplazar los archivos existentes.
-
-## 3. Ejecutar
+## Crear el proyecto base
 
 ```bash
-ng serve -o
+ng new portafolio-piero --style=scss --routing --skip-tests
+cd portafolio-piero
 ```
 
-La aplicación se abrirá normalmente en:
+Copia las carpetas `src` y `public` de este paquete dentro del proyecto y acepta reemplazar los archivos.
+
+Después ejecuta:
+
+```bash
+npm start
+```
+
+Para comprobar la compilación de producción:
+
+```bash
+npm run build
+```
+
+## Personalizar todos tus datos
+
+Edita únicamente:
 
 ```text
-http://localhost:4200
+src/app/core/data/portfolio.data.ts
 ```
 
-## Personalización rápida
+Ahí puedes modificar:
 
-En `src/app/app.ts` cambia:
+- Nombre y presentación.
+- Correo, teléfono, GitHub y LinkedIn.
+- Carrera y estudios.
+- Tecnologías.
+- Proyectos actuales y futuros.
+- Estado de cada proyecto.
 
-- `brandName`: nombre de tu empresa o proyecto.
-- `messages`: mensajes dinámicos.
-- `contactEmail`: correo de contacto.
-- `estimatedLaunch`: texto de lanzamiento.
+Los enlaces de correo, teléfono y redes sociales son ejemplos porque esos datos no fueron proporcionados.
 
-En `src/app/app.scss` puedes modificar las variables de color ubicadas al inicio del archivo.
+El archivo `vercel.json` incluye una regla de reescritura para conservar las rutas de Angular al recargar páginas como `/perfil` o `/proyectos`.
+
+## Iconos
+
+Los iconos se cargan como SVG desde el CDN público de Devicon. No es necesario instalar librerías adicionales.
+
+## Despliegue en Vercel
+
+Configuración normal:
+
+```text
+Build Command: npm run build
+Output Directory: dist/portafolio-piero/browser
+```
+
+Vercel suele detectar Angular automáticamente. Si el nombre del proyecto cambia, revisa la carpeta generada dentro de `dist`.

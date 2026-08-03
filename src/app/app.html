@@ -1,100 +1,97 @@
-<main class="construction-page">
-  <div class="ambient ambient--one" aria-hidden="true"></div>
-  <div class="ambient ambient--two" aria-hidden="true"></div>
-  <div class="grid-pattern" aria-hidden="true"></div>
+<div class="site">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" routerLink="/" (click)="closeMenu()">
+        <span class="brand-mark">{{ portfolio.initials }}</span>
+        <span>
+          <strong>{{ portfolio.shortName }}</strong>
+          <small>{{ portfolio.role }}</small>
+        </span>
+      </a>
 
-  <nav class="topbar" aria-label="Navegación principal">
-    <a class="brand" href="#" aria-label="Página principal">
-      <span class="brand__symbol" aria-hidden="true">
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Abrir o cerrar navegación"
+        [attr.aria-expanded]="menuOpen()"
+        (click)="toggleMenu()"
+      >
         <span></span>
         <span></span>
-      </span>
+      </button>
 
-      <span class="brand__name">{{ brandName }}</span>
-    </a>
-
-    <a class="contact-link" [href]="'mailto:' + contactEmail">
-      Contacto
-      <span aria-hidden="true">↗</span>
-    </a>
-  </nav>
-
-  <section class="hero">
-    <div class="hero__content">
-      <div class="status-badge">
-        <span class="status-badge__light" aria-hidden="true"></span>
-        Sitio en desarrollo
-      </div>
-
-      <p class="eyebrow">Una nueva presencia digital</p>
-
-      <h1>
-        Estamos construyendo
-        <span>algo sólido.</span>
-      </h1>
-
-      <p class="description">
-        Trabajamos en una experiencia moderna, funcional y cuidadosamente
-        diseñada. Muy pronto podrás conocer el resultado.
-      </p>
-
-      <div class="dynamic-status" aria-live="polite">
-        <div class="dynamic-status__top">
-          <span>{{ currentMessage() }}</span>
-
-          <span class="loading-dots" aria-hidden="true">
-            <i></i>
-            <i></i>
-            <i></i>
-          </span>
-        </div>
-
-        <div
-          class="progress"
-          role="progressbar"
-          aria-label="Progreso aproximado de construcción"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          [attr.aria-valuenow]="progress()"
+      <nav class="main-nav" [class.is-open]="menuOpen()">
+        <a
+          routerLink="/"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
         >
-          <span class="progress__fill" [style.width.%]="progress()"></span>
-        </div>
-
-        <div class="dynamic-status__footer">
-          <span>Progreso de preparación</span>
-          <strong>{{ progress() }}%</strong>
-        </div>
-      </div>
+          Inicio
+        </a>
+        <a
+          routerLink="/perfil"
+          routerLinkActive="is-active"
+          (click)="closeMenu()"
+        >
+          Perfil
+        </a>
+        <a
+          routerLink="/tecnologias"
+          routerLinkActive="is-active"
+          (click)="closeMenu()"
+        >
+          Tecnologías
+        </a>
+        <a
+          routerLink="/proyectos"
+          routerLinkActive="is-active"
+          (click)="closeMenu()"
+        >
+          Proyectos
+        </a>
+        <a
+          class="nav-contact"
+          routerLink="/contacto"
+          routerLinkActive="is-active"
+          (click)="closeMenu()"
+        >
+          Contacto
+        </a>
+      </nav>
     </div>
+  </header>
 
-    <div class="visual" aria-hidden="true">
-      <div class="visual__frame">
-        <span class="visual__label">WORK IN PROGRESS</span>
+  <main>
+    <router-outlet />
+  </main>
 
-        <div class="architecture">
-          <span class="architecture__line architecture__line--one"></span>
-          <span class="architecture__line architecture__line--two"></span>
-          <span class="architecture__line architecture__line--three"></span>
-
-          <div class="architecture__block architecture__block--large"></div>
-          <div class="architecture__block architecture__block--medium"></div>
-          <div class="architecture__block architecture__block--small"></div>
-
-          <div class="architecture__orb">
-            <span></span>
-          </div>
-        </div>
-
-        <div class="visual__footer">
-          <span>{{ estimatedLaunch }}</span>
-          <span>01 — 04</span>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>{{ portfolio.shortName }}</strong>
+        <p>{{ portfolio.role }} · {{ portfolio.location }}</p>
       </div>
-    </div>
-  </section>
 
-  <footer class="footer">
-    <span>© 2026 {{ brandName }}</span>
-    <span>Construyendo con propósito.</span>
+      <div class="footer-links">
+        <a [href]="'mailto:' + portfolio.contact.email">Correo</a>
+        <a
+          [href]="portfolio.contact.githubUrl"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          [href]="portfolio.contact.linkedinUrl"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <span class="footer-copy">© 2026</span>
+    </div>
   </footer>
-</main>
+</div>

@@ -1,0 +1,134 @@
+<section class="page hero-page">
+  <div class="hero-glow hero-glow--one" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow--two" aria-hidden="true"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="availability">
+        <span></span>
+        {{ portfolio.availability }}
+      </div>
+
+      <p class="eyebrow">{{ portfolio.career }}</p>
+
+      <h1>
+        Construyo software
+        <span>con propósito.</span>
+      </h1>
+
+      <p class="hero-description">{{ portfolio.introduction }}</p>
+
+      <div class="rotating-message" aria-live="polite">
+        <span>Enfoque actual</span>
+        <strong>{{ phrase() }}</strong>
+        <i aria-hidden="true"></i>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button button--primary" routerLink="/proyectos">
+          Ver proyectos
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a class="button button--ghost" routerLink="/contacto">
+          Contactarme
+        </a>
+      </div>
+
+      <div class="hero-facts">
+        <div>
+          <strong>2024</strong>
+          <span>Estudios culminados</span>
+        </div>
+        <div>
+          <strong>Full stack</strong>
+          <span>Perfil de desarrollo</span>
+        </div>
+        <div>
+          <strong>Arequipa</strong>
+          <span>Perú</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="portrait-card">
+        <div class="portrait-card__header">
+          <span>PORTFOLIO / 2026</span>
+          <span>01</span>
+        </div>
+
+        <div class="portrait-initials">{{ portfolio.initials }}</div>
+
+        <div class="code-window">
+          <div class="code-window__dots"><i></i><i></i><i></i></div>
+          <code>
+            <span>const</span> developer = &#123;<br>
+            &nbsp;&nbsp;name: <em>'{{ portfolio.shortName }}'</em>,<br>
+            &nbsp;&nbsp;focus: <em>'Web + Data'</em>,<br>
+            &nbsp;&nbsp;building: <em>true</em><br>
+            &#125;;
+          </code>
+        </div>
+
+        <div class="portrait-card__footer">
+          <span>{{ portfolio.role }}</span>
+          <span>{{ portfolio.location }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-summary">
+  <div class="container summary-grid">
+    <div>
+      <p class="section-number">01 / PERFIL</p>
+      <h2>Base técnica y aprendizaje constante.</h2>
+    </div>
+
+    <div>
+      <p>{{ portfolio.about }}</p>
+      <a class="text-link" routerLink="/perfil">
+        Conocer mi formación <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="home-cards">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <p class="section-number">02 / CAPACIDADES</p>
+        <h2>Del frontend al despliegue.</h2>
+      </div>
+      <a class="text-link" routerLink="/tecnologias">
+        Ver todas las tecnologías <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="capability-grid">
+      <article>
+        <span>01</span>
+        <h3>Interfaces</h3>
+        <p>Experiencias web responsive con Angular, React, TypeScript y SCSS.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Backend</h3>
+        <p>APIs REST, autenticación y lógica de negocio con Python y Node.js.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Datos</h3>
+        <p>PostgreSQL, MySQL, MongoDB y primeros proyectos de análisis predictivo.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Despliegue</h3>
+        <p>Docker, Git, Linux y fundamentos de infraestructura en la nube.</p>
+      </article>
+    </div>
+  </div>
+</section>

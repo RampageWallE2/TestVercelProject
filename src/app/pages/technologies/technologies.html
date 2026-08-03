@@ -1,0 +1,51 @@
+<section class="page page-heading">
+  <div class="container">
+    <p class="eyebrow">Stack tecnológico</p>
+    <div class="page-title-grid">
+      <h1>Herramientas que utilizo para construir software.</h1>
+      <p>
+        Esta lista presenta las tecnologías con las que he trabajado y mi nivel
+        actual. Los niveles pueden actualizarse desde un único archivo de datos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="technology-sections">
+  <div class="container">
+    @for (group of groups; track group.category; let groupIndex = $index) {
+      <section class="technology-group">
+        <div class="technology-group__heading">
+          <span>0{{ groupIndex + 1 }}</span>
+          <div>
+            <h2>{{ group.category }}</h2>
+            <p>{{ group.description }}</p>
+          </div>
+        </div>
+
+        <div class="technology-grid">
+          @for (
+            technology of technologiesByCategory(group.category);
+            track technology.name
+          ) {
+            <article class="technology-card">
+              <div class="technology-icon">
+                <i
+                  [class]="technology.icon"
+                  [attr.aria-label]="'Logo de ' + technology.name"
+                ></i>
+              </div>
+
+              <div>
+                <h3>{{ technology.name }}</h3>
+                <p>{{ technology.category }}</p>
+              </div>
+
+              <span class="technology-level">{{ technology.level }}</span>
+            </article>
+          }
+        </div>
+      </section>
+    }
+  </div>
+</section>

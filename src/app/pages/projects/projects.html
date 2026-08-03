@@ -1,0 +1,81 @@
+<section class="page page-heading">
+  <div class="container">
+    <p class="eyebrow">Trabajo y planificación</p>
+    <div class="page-title-grid">
+      <h1>Proyectos actuales y próximas soluciones.</h1>
+      <p>
+        Cada recuadro se genera desde el arreglo <code>projects</code>. Puedes
+        agregar, eliminar o modificar proyectos sin cambiar este HTML.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="container">
+    <div class="projects-grid">
+      @for (project of portfolio.projects; track project.title; let index = $index) {
+        <article class="project-card" [class.project-card--featured]="project.featured">
+          <div class="project-card__top">
+            <span class="project-index">0{{ index + 1 }}</span>
+            <span
+              [class]="'project-status ' + statusClass(project.status)"
+            >
+              {{ project.status }}
+            </span>
+          </div>
+
+          <div>
+            <p class="project-year">{{ project.year }}</p>
+            <h2>{{ project.title }}</h2>
+            <p class="project-summary">{{ project.summary }}</p>
+          </div>
+
+          <div class="project-stack">
+            @for (technology of project.stack; track technology) {
+              <span>{{ technology }}</span>
+            }
+          </div>
+
+          <div class="project-links">
+            @if (project.repository) {
+              <a [href]="project.repository" target="_blank" rel="noreferrer">
+                Repositorio ↗
+              </a>
+            } @else {
+              <span>Repositorio pendiente</span>
+            }
+
+            @if (project.demo) {
+              <a [href]="project.demo" target="_blank" rel="noreferrer">
+                Demo ↗
+              </a>
+            }
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="project-instructions">
+      <div>
+        <span aria-hidden="true">+</span>
+      </div>
+      <div>
+        <p class="section-number">AGREGAR OTRO PROYECTO</p>
+        <h2>Duplica un objeto y completa sus datos.</h2>
+        <p>
+          Abre <code>src/app/core/data/portfolio.data.ts</code>, busca
+          <code>projects</code> y copia uno de sus objetos.
+        </p>
+      </div>
+    </div>
+
+    <div class="page-cta">
+      <div>
+        <p class="eyebrow">¿Tienes una oportunidad?</p>
+        <h2>Conversemos sobre el proyecto.</h2>
+      </div>
+      <a class="button button--primary" routerLink="/contacto">Ir a contacto</a>
+    </div>
+  </div>
+</section>

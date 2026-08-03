@@ -1,0 +1,254 @@
+export type ProjectStatus =
+  | 'En desarrollo'
+  | 'Planificado'
+  | 'Idea futura'
+  | 'Completado';
+
+export interface Technology {
+  name: string;
+  category: 'Frontend' | 'Backend' | 'Base de datos' | 'DevOps' | 'Datos';
+  icon: string;
+  level: string;
+}
+
+export interface Project {
+  title: string;
+  summary: string;
+  status: ProjectStatus;
+  year: string;
+  stack: string[];
+  repository?: string;
+  demo?: string;
+  featured?: boolean;
+}
+
+export const PORTFOLIO = {
+  name: 'Piero Valentino Noa Chahuayo',
+  shortName: 'Piero Noa',
+  initials: 'PN',
+  role: 'Desarrollador de software',
+  career: 'Diseño y Desarrollo de Software',
+  institution: 'TECSUP',
+  location: 'Arequipa, Perú',
+  availability: 'Disponible para oportunidades junior y proyectos',
+  introduction:
+    'Desarrollo aplicaciones web y APIs con interés en soluciones financieras, procesamiento de datos y productos digitales útiles.',
+  about:
+    'Culminé la carrera de Diseño y Desarrollo de Software en TECSUP en diciembre de 2024. Actualmente continúo fortaleciendo mis habilidades en desarrollo full stack, arquitectura de software, datos y despliegue.',
+  heroPhrases: [
+    'Aplicaciones web modernas',
+    'APIs y servicios backend',
+    'Soluciones basadas en datos',
+    'Software útil y escalable',
+  ],
+  contact: {
+    email: 'tu-correo@ejemplo.com',
+    phone: '+51 000 000 000',
+    githubLabel: 'github.com/tuusuario',
+    githubUrl: 'https://github.com/tuusuario',
+    linkedinLabel: 'linkedin.com/in/tuusuario',
+    linkedinUrl: 'https://www.linkedin.com/in/tuusuario/',
+  },
+  education: [
+    {
+      period: '2022 — 2024',
+      title: 'Diseño y Desarrollo de Software',
+      institution: 'TECSUP — Arequipa',
+      description:
+        'Estudios culminados en diciembre de 2024. Formación en desarrollo web, bases de datos, programación, análisis y construcción de soluciones de software.',
+      status: 'Titulación en proceso',
+    },
+    {
+      period: 'Actualidad',
+      title: 'Formación continua',
+      institution: 'Aprendizaje independiente',
+      description:
+        'Profundización en Angular, Flask, PostgreSQL, Docker, arquitectura backend, análisis de datos e inglés.',
+      status: 'En progreso',
+    },
+  ],
+  strengths: [
+    'Desarrollo frontend con Angular y React',
+    'APIs REST con Python, Flask y Node.js',
+    'Diseño y consumo de bases de datos relacionales',
+    'Contenedores y entornos reproducibles con Docker',
+    'Interés en analítica, automatización y predicción',
+  ],
+
+  technologies: [
+  {
+    name: 'Angular',
+    category: 'Frontend',
+    icon: 'devicon-angularjs-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'React',
+    category: 'Frontend',
+    icon: 'devicon-react-original colored',
+    level: 'Básico',
+  },
+  {
+    name: 'TypeScript',
+    category: 'Frontend',
+    icon: 'devicon-typescript-original colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'JavaScript',
+    category: 'Frontend',
+    icon: 'devicon-javascript-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'HTML5',
+    category: 'Frontend',
+    icon: 'devicon-html5-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'SCSS / CSS',
+    category: 'Frontend',
+    icon: 'devicon-sass-original colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Python',
+    category: 'Backend',
+    icon: 'devicon-python-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Flask',
+    category: 'Backend',
+    icon: 'devicon-flask-original',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Django',
+    category: 'Backend',
+    icon: 'devicon-django-plain colored',
+    level: 'Básico',
+  },
+  {
+    name: 'Node.js',
+    category: 'Backend',
+    icon: 'devicon-nodejs-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Express',
+    category: 'Backend',
+    icon: 'devicon-express-original',
+    level: 'Intermedio',
+  },
+  {
+    name: 'PHP',
+    category: 'Backend',
+    icon: 'devicon-php-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Laravel',
+    category: 'Backend',
+    icon: 'devicon-laravel-original colored',
+    level: 'Intermedio',
+  },
+  {
+    name: '.NET',
+    category: 'Backend',
+    icon: 'devicon-dotnetcore-plain colored',
+    level: 'Básico',
+  },
+  {
+    name: 'PostgreSQL',
+    category: 'Base de datos',
+    icon: 'devicon-postgresql-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'MySQL',
+    category: 'Base de datos',
+    icon: 'devicon-mysql-original colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'MongoDB',
+    category: 'Base de datos',
+    icon: 'devicon-mongodb-plain colored',
+    level: 'Básico',
+  },
+  {
+    name: 'Docker',
+    category: 'DevOps',
+    icon: 'devicon-docker-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Git',
+    category: 'DevOps',
+    icon: 'devicon-git-plain colored',
+    level: 'Intermedio',
+  },
+  {
+    name: 'Linux',
+    category: 'DevOps',
+    icon: 'devicon-linux-plain',
+    level: 'Básico',
+  },
+  {
+    name: 'AWS',
+    category: 'DevOps',
+    icon: 'devicon-amazonwebservices-plain-wordmark colored',
+    level: 'Básico',
+  },
+  {
+    name: 'Pandas',
+    category: 'Datos',
+    icon: 'devicon-pandas-plain colored',
+    level: 'Básico',
+  },
+  {
+    name: 'NumPy',
+    category: 'Datos',
+    icon: 'devicon-numpy-plain colored',
+    level: 'Básico',
+  },
+] as Technology[],
+
+  projects: [
+    {
+      title: 'Personal Finance Analytics',
+      summary:
+        'Aplicación para registrar ingresos y gastos, organizar categorías, consultar movimientos y visualizar resúmenes financieros personales.',
+      status: 'En desarrollo',
+      year: '2026',
+      stack: ['Angular', 'Flask', 'PostgreSQL', 'Docker', 'JWT'],
+      featured: true,
+    },
+    {
+      title: 'Predictor de precios de viviendas',
+      summary:
+        'Proyecto de análisis de datos para limpiar información, entrenar un modelo y estimar precios a partir de características de una vivienda.',
+      status: 'Planificado',
+      year: 'Próximo',
+      stack: ['Python', 'Pandas', 'NumPy', 'scikit-learn'],
+    },
+    {
+      title: 'Próximo proyecto',
+      summary:
+        'Reemplaza este texto por el problema que resolverá tu siguiente aplicación, sus usuarios y el resultado que esperas conseguir.',
+      status: 'Idea futura',
+      year: 'Por definir',
+      stack: ['Tecnología 1', 'Tecnología 2', 'Tecnología 3'],
+    },
+    {
+      title: 'Nueva solución de software',
+      summary:
+        'Este recuadro está preparado para agregar otro proyecto. Duplica el objeto correspondiente dentro de portfolio.data.ts.',
+      status: 'Idea futura',
+      year: 'Por definir',
+      stack: ['Stack por definir'],
+    },
+  ] as Project[],
+};

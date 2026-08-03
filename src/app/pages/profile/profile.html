@@ -1,0 +1,75 @@
+<section class="page page-heading">
+  <div class="container">
+    <p class="eyebrow">Perfil profesional</p>
+    <div class="page-title-grid">
+      <h1>Carrera, estudios y dirección profesional.</h1>
+      <p>{{ portfolio.about }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="profile-overview">
+  <div class="container profile-grid">
+    <aside class="profile-card">
+      <div class="profile-monogram">{{ portfolio.initials }}</div>
+      <h2>{{ portfolio.name }}</h2>
+      <p>{{ portfolio.role }}</p>
+
+      <dl>
+        <div>
+          <dt>Carrera</dt>
+          <dd>{{ portfolio.career }}</dd>
+        </div>
+        <div>
+          <dt>Institución</dt>
+          <dd>{{ portfolio.institution }}</dd>
+        </div>
+        <div>
+          <dt>Ubicación</dt>
+          <dd>{{ portfolio.location }}</dd>
+        </div>
+      </dl>
+
+      <a class="button button--primary button--full" routerLink="/contacto">
+        Hablemos
+      </a>
+    </aside>
+
+    <div class="profile-content">
+      <div class="section-heading section-heading--compact">
+        <div>
+          <p class="section-number">01 / FORMACIÓN</p>
+          <h2>Trayectoria académica</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        @for (item of portfolio.education; track item.title) {
+          <article class="timeline-item">
+            <div class="timeline-period">{{ item.period }}</div>
+            <div>
+              <span class="status-pill">{{ item.status }}</span>
+              <h3>{{ item.title }}</h3>
+              <strong>{{ item.institution }}</strong>
+              <p>{{ item.description }}</p>
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="strengths-block">
+        <p class="section-number">02 / FORTALEZAS</p>
+        <h2>Áreas en las que sigo construyendo experiencia</h2>
+
+        <div class="strength-list">
+          @for (strength of portfolio.strengths; track strength) {
+            <div>
+              <span aria-hidden="true">↗</span>
+              {{ strength }}
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
