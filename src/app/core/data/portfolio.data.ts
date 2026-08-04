@@ -259,20 +259,12 @@ export const PORTFOLIO = {
       stack: ['Python', 'Pandas', 'NumPy', 'scikit-learn'],
     },
     {
-      title: 'Próximo proyecto',
+      title: 'Cementery Porject',
       summary:
-        'Reemplaza este texto por el problema que resolverá tu siguiente aplicación, sus usuarios y el resultado que esperas conseguir.',
-      status: 'Idea futura',
-      year: 'Por definir',
-      stack: ['Tecnología 1', 'Tecnología 2', 'Tecnología 3'],
-    },
-    {
-      title: 'Nueva solución de software',
-      summary:
-        'Este recuadro está preparado para agregar otro proyecto. Duplica el objeto correspondiente dentro de portfolio.data.ts.',
-      status: 'Idea futura',
-      year: 'Por definir',
-      stack: ['Stack por definir'],
+        'Projecto real sobre cementerios basado en Parque del recuerdo Arequipa',
+      status: 'Planificado',
+      year: '2026',
+      stack: ['Angular', 'Flask', 'GO'],
     },
   ] as Project[],
 };
