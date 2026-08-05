@@ -249,6 +249,7 @@ export const PORTFOLIO = {
       year: '2026',
       stack: ['Angular', 'Flask', 'PostgreSQL', 'Docker', 'JWT'],
       featured: true,
+      repository: 'https://github.com/RampageWallE2/personal-finance-analytics'
     },
     {
       title: 'Cementery Porject',
@@ -257,6 +258,7 @@ export const PORTFOLIO = {
       status: 'En desarrollo',
       year: '2026',
       stack: ['Angular', 'Flask', 'GO', 'Docker', 'JWT'],
+      repository: 'https://github.com/RampageWallE2/cemetery-management-project'
     },
   ] as Project[],
 };
