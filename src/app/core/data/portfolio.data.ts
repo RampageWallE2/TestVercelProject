@@ -251,20 +251,12 @@ export const PORTFOLIO = {
       featured: true,
     },
     {
-      title: 'Predictor de precios de viviendas',
-      summary:
-        'Proyecto de análisis de datos para limpiar información, entrenar un modelo y estimar precios a partir de características de una vivienda.',
-      status: 'Planificado',
-      year: 'Próximo',
-      stack: ['Python', 'Pandas', 'NumPy', 'scikit-learn'],
-    },
-    {
       title: 'Cementery Porject',
       summary:
         'Projecto real sobre cementerios basado en Parque del recuerdo Arequipa',
-      status: 'Planificado',
+      status: 'En desarrollo',
       year: '2026',
-      stack: ['Angular', 'Flask', 'GO'],
+      stack: ['Angular', 'Flask', 'GO', 'Docker', 'JWT'],
     },
   ] as Project[],
 };
