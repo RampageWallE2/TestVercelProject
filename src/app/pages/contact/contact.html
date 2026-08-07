@@ -44,13 +44,27 @@
 
       <a
         class="contact-item"
+        [href]="portfolio.contact.github2Url"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>04</span>
+        <div>
+          <small>Github Institucional</small>
+          <strong>{{ portfolio.contact.github2Label }}</strong>
+        </div>
+        <i aria-hidden="true">↗</i>
+      </a>
+
+      <a
+        class="contact-item"
         [href]="portfolio.contact.githubUrl"
         target="_blank"
         rel="noreferrer"
       >
         <span>03</span>
         <div>
-          <small>GitHub</small>
+          <small>GitHub Personal</small>
           <strong>{{ portfolio.contact.githubLabel }}</strong>
         </div>
         <i aria-hidden="true">↗</i>

@@ -48,6 +48,8 @@ export const PORTFOLIO = {
     githubUrl: 'https://github.com/RampageWallE2',
     linkedinLabel: 'linkedin.com/in/piero-noa-chahuayo-aab5a0366',
     linkedinUrl: 'https://www.linkedin.com/in/piero-noa-chahuayo-aab5a0366/',
+    github2Label: 'github.com/RampageWallE',
+    github2Url: 'https://github.com/RampageWallE?tab=overview&from=2024-12-01&to=2024-12-31',
   },
   education: [
     {
