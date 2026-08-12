@@ -244,6 +244,15 @@ export const PORTFOLIO = {
 
   projects: [
     {
+      title: 'ML Learning Plataform',
+      summary:
+        'Plataforma gamificada de aprendizaje enfocada en los fundamentos matemáticos para Machine Learning. Combina un mundo explorable, progresión por niveles, explicaciones visuales, minijuegos y ejercicios interactivos para enseñar conceptos de forma intuitiva y conectarlos progresivamente con aplicaciones reales de datos, IA e industria.',
+      status: 'En desarrollo',
+      year: '2026',
+      stack: ['Angular', 'Flask', 'Phaser', 'Docker', 'JWT'],
+      repository: 'https://github.com/RampageWallE2/ml-learning-platform.git'
+    },
+    {
       title: 'Personal Finance Analytics',
       summary:
         'Aplicación para registrar ingresos y gastos, organizar categorías, consultar movimientos y visualizar resúmenes financieros personales.',
